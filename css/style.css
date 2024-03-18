@@ -1,0 +1,42 @@
+/* :root {
+
+} */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(53, 53, 53);
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgb(197, 197, 197);
+	text-align: center;
+}
+
+.main-header {
+	display: flex;
+	list-style-type: none;
+	justify-content: space-between;
+	margin: 0;
+	padding-inline: 1em;
+
+	background-color: orangered;
+}
+
+.main-nav {
+	display: flex;
+	list-style-type: none;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1em;
+	margin: 0;
+	padding-inline: 1em;
+}
+
+.nav-item {
+	cursor: pointer;
+}
+
+.canvas-container {
+	margin: 10px auto;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Meme Generator</title>
+		<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='gray'%3E%3Ctext y='50' x='50' font-size='90' text-anchor='middle' dominant-baseline='middle'%3E🤣%3C/text%3E%3C/svg%3E" />
+	</head>
+	<body onload="onInit()">
+		<!-- HEADER -->
+		<header class="main-header">
+			<h1>Meme Generator</h1>
+			<ul class="main-nav">
+				<li class="nav-item"><h2 onclick="onGotoHome()">Home</h2></li>
+				<li class="nav-item"><h2 onclick="onGotoGenerator()">Generator</h2></li>
+				<li class="nav-item"><h2 onclick="onGotoAbout()">About</h2></li>
+			</ul>
+		</header>
+
+		<main>
+			<!-- GALLERY -->
+			<section class="gallery-container"></section>
+
+			<!-- EDITOR -->
+			<section class="editor-container">
+				<div class="canvas-container">
+					<canvas class="main-canvas" width="500" height="500" onclick="placeText()"></canvas>
+				</div>
+				<div class="input-container">
+					<input type="text" class="top-text-input" placeholder="Text here" />
+					<input type="text" class="bottom-text-input" placeholder="Text here" />
+				</div>
+
+				<!-- EXTRAS -->
+				<div class="btn-container">
+					<a href="#" class="btn gen-btn download-btn" onclick="onDownload(this)" download="file-name">Download</a>
+				</div>
+			</section>
+		</main>
+
+		<!-- SERVICES -->
+		<script src="js/services/storage.service.js"></script>
+		<script src="js/services/service.service.js"></script>
+		<script src="js/services/meme.service.js"></script>
+		<script src="js/services/util.service.js"></script>
+		<!-- SCRIPTS -->
+		<script src="js/meme.controller.js"></script>
+		<script src="js/gallery.controller.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
