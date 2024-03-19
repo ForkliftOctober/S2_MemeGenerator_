@@ -10,8 +10,8 @@ function renderMeme() {
 
 	drawImg()
 	resizeCanvas()
-	renderText()
-	// coverCanvasWithImg(elImg)
+	drawText()
+	coverCanvasWithImg(elImg)
 	window.addEventListener('resize', () => resizeCanvas())
 }
 
@@ -34,13 +34,17 @@ function drawImg() {
 }
 
 // CANVAS TEXT
-function renderText() {
-	gCtx.font = '30px Impact'
-	gCtx.fillStyle = 'white'
+function drawText(text = 'Hello World!', x, y) {
 	gCtx.strokeStyle = 'black'
-	gCtx.lineWidth = 10
+	gCtx.fillStyle = 'white'
+	gCtx.lineWidth = 1
+
+	gCtx.font = '45px Impact'
 	gCtx.textAlign = 'center'
-	gCtx.fillText('Hello World!', gElCanvas.width / 2, gElCanvas.height - 20)
+	gCtx.textBaseline = 'middle'
+
+	gCtx.fillText(text, gElCanvas.width / 2, gElCanvas.height - 20)
+	gCtx.strokeText(text, gElCanvas.width / 2, gElCanvas.height - 20)
 }
 
 // BUTTONS
@@ -50,5 +54,3 @@ function onDownload(elLink) {
 	const dataUrl = gElCanvas.toDataURL()
 	elLink.href = dataUrl
 }
-
-// TODO: fjdkslfjsl
